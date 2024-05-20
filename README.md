@@ -61,7 +61,7 @@ Visualized the distributions of various features in the dataset.
 
 ### Section 3) Experimental Design
 
-**Experiment 1: K-means StandardScaler vs RobustScaler**
+### **Experiment 1: K-means StandardScaler vs RobustScaler**
 - **The main purpose**: To assess the suitability of StandardScaler or RobustScaler for preprocessing data with outliers and its impact on clustering analysis.
 - **Baselines**: Clustering segmentation analysis was used to compare. 
 - **Evaluation metrics**: We used silhouette scores to compare the suitability of StandardScaler, and the resulting score was 0.1, which is very small and is unsatisfactory. We also visualised the resulting clusters and the clusters were not easily defined, showing poor clustering quality.
@@ -69,7 +69,7 @@ Visualized the distributions of various features in the dataset.
 ![](images/silhouette_scores.png)
 ![](images/silhouette_analysis_kmeans.png)
 
-**Experiment 2: Number of clusters**
+### **Experiment 2: Number of clusters**
 - **The main purpose**: To determine the right number of clusters for clustering algorithms. 
 - **Baselines**: We used elbow method, silhouette scores for k-means and dendrograms for hierarchical clustering. 
 - **Evaluation metrics**: We used silhouette scores to determine the suitable number of clusters. In both cases, 2 was the most optimal number of clusters. However, 2 segments in the segment analysis would provide limited insight into the segments, therefore we chose 3 clusters as it had acceptably high silhouette scores and overall suitable for our analysis.
@@ -81,7 +81,7 @@ Elbow method and silhouette analysis for k-means:
 ![Elbow Method Kmeans](images/elbow_method_robust.png)
 ![Silhouette Kmeans](images/silhouette_analysis_kmeans.png)
 
-**Experiment 3: K-means vs Hierarchical clustering**
+### **Experiment 3: K-means vs Hierarchical clustering**
 - **The main purpose**: To assess whether to better use K-means or Hierarchical clustering for our model.
 - **Baselines**: We implemented both K-means and Hierarchical clustering to compare their results. 
 - **Evaluation metrics**: We used silhouette scores to compare the suitability of each clustering method. K-means had value of 0.537 vs Hierchical 0.448. The cluster visualisation also showed clearly that the K-means clusters had better separation than the Hierarchical clusters.
