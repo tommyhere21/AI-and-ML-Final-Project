@@ -39,7 +39,6 @@ Our EDA focused on uncovering underlying patterns and relationships within the d
  
 Clustering Techniques Used: K-Means Clustering:  Aimed to segment customers into distinct groups based on their spending behavior and account characteristics. We determined the optimal number of clusters using the Elbow Method and validated these segments with silhouette scores. Agglomerative Clustering:  Served as a hierarchical clustering approach to validate and refine the segments identified by k-means. This method provided a different perspective on the data's structure and helped in understanding the hierarchical relationships between customers. Utility of Segmentation: These techniques allowed us to categorize customers into segments that reflect varying levels of purchasing power and engagement, which can be targeted with tailored marketing strategies.
 
-- 
 #### Correlation Heatmap
 
 Visualized the correlation between different features in the dataset.
