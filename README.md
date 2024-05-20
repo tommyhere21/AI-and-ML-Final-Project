@@ -86,7 +86,7 @@ to reduce dimensionality for effective visualization of K-means clustering resul
 
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/d0d7579b-32bb-42e7-817a-db7fff4517be)
 
-# Elbow method to find the right number of clusters.
+ Elbow method to find the right number of clusters.
 Iterate through 1-9 number of clusters and calculate the inertia for each number of clusters and plot it. The elbow point is where the inertia starts to decrease at a slower rate. The elbow point is not fully clear, but 3 is most likely it.
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/728e32ed-ed3c-46aa-8fd5-e236f8cc4741)
 
