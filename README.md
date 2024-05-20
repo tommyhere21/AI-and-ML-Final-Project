@@ -86,36 +86,118 @@ Elbow method and silhouette analysis for k-means:
 - **Baselines**: We implemented both K-means and Hierarchical clustering to compare their results. 
 - **Evaluation metrics**: We used silhouette scores to compare the suitability of each clustering method. K-means had value of 0.537 vs Hierchical 0.448. The cluster visualisation also showed clearly that the K-means clusters had better separation than the Hierarchical clusters.
 - Result: K-means is better suited than Hierarchical.
+- Hierarchical cluster visualisation:
 ![Clusters hierarchical](images/cluster_visualisation_hierarchical.png)
+- K-means cluster visualisation:
 ![Clusters k-means](images/cluster_visualisation_kmeans.png)
  
 ## 4) Results
 
 ### Cluster Descriptions
 
-Clusters were described based on the mean values of features within each cluster. This provided insights into the characteristics of customers in each segment.
+### Cluster 0: High Spenders and Frequent Buyers
 
-- **Cluster 0**: Customers with high account total and emergency funds, moderate item costs.
-- **Cluster 1**: Customers with moderate account total and item costs, frequent single item purchases.
-- **Cluster 2**: Customers with low account total, high frequency of emergency fund usage.
+#### Defining Features:
+- **High Account Total**: The average account total is 3118.14, which is quite high.
+- **High Item Costs**: Total item costs are 6904.44, with single item costs at 4757.12.
+- **High Multiple Item Costs**: 2148.47, the highest among the clusters.
+- **High Emergency Funds**: Emergency funds are at 1250.94, indicating substantial savings for emergencies.
+- **Frequent Item Purchases**: Item buy frequency is 0.92, with single item buy frequency at 0.73 and multiple item buy frequency at 0.72.
+- **Moderate Emergency Use Frequency**: At 0.09, relatively low compared to Clusters 1 and 2.
+- **High Payment Completion Rate**: At 0.32, significantly higher than the other clusters.
+- **Distribution of Locations and Account Types**:
+  - Locations: Chicago (35.40%), Los Angeles (31.33%), New York (33.27%).
+  - Account Types: Premium (34.04%), Regular (29.98%), Student (35.98%).
+
+#### Summary:
+Cluster 0 represents high spenders and frequent buyers with high item costs, substantial emergency funds, and high payment completion rates. They are well-distributed across locations and tend to have a higher percentage of premium and student account types.
+
+### Cluster 1: Low Spenders and Infrequent Buyers
+
+#### Defining Features:
+- **Low Account Total**: The average account total is 1447.01, the lowest among the clusters.
+- **Low Item Costs**: Total item costs are 635.74, with single item costs at 337.18.
+- **Low Multiple Item Costs**: 298.81, the lowest among the clusters.
+- **Moderate Emergency Funds**: Emergency funds are at 959.10.
+- **Infrequent Item Purchases**: Item buy frequency is 0.46, with single item buy frequency at 0.17 and multiple item buy frequency at 0.34.
+- **Highest Emergency Use Frequency**: At 0.14, the highest among the clusters.
+- **Low Payment Completion Rate**: At 0.14, lower than Cluster 0 but higher than Cluster 2.
+- **Distribution of Locations and Account Types**:
+  - Locations: Chicago (33.33%), Los Angeles (33.19%), New York (33.48%).
+  - Account Types: Premium (33.50%), Regular (33.68%), Student (32.82%).
+
+#### Summary:
+Cluster 1 represents low spenders and infrequent buyers with low item costs, moderate emergency funds, and the highest emergency use frequency. This cluster is evenly distributed across locations and account types.
+
+### Cluster 2: High Account Total with Very Low Payment Completion
+
+#### Defining Features:
+- **Highest Account Total**: The average account total is 4569.73, the highest among the clusters.
+- **Moderate Item Costs**: Total item costs are 1434.47, with single item costs at 328.03.
+- **Moderate Multiple Item Costs**: 1106.43, moderate compared to the other clusters.
+- **High Emergency Funds**: Emergency funds are at 1393.10, the highest among the clusters.
+- **Moderate Item Purchases**: Item buy frequency is 0.50, with single item buy frequency at 0.07 and multiple item buy frequency at 0.46.
+- **High Emergency Use Frequency**: At 0.13, slightly lower than Cluster 1.
+- **Very Low Payment Completion Rate**: At 0.003, significantly lower than the other clusters.
+- **Distribution of Locations and Account Types**:
+  - Locations: Chicago (30.00%), Los Angeles (33.33%), New York (36.67%).
+  - Account Types: Premium (31.67%), Regular (33.33%), Student (35.00%).
+
+#### Summary:
+Cluster 2 represents users with the highest account totals and emergency funds but moderate item costs and very low payment completion rates. This cluster has a higher representation from New York and a balanced distribution across premium, regular, and student account types.
+
+### Differences and Insights:
+
+- **Cluster 0**: High spenders and frequent buyers with high item costs and substantial emergency funds. They have high payment completion rates and are well-distributed across account types, particularly premium and student accounts.
+- **Cluster 1**: Low spenders and infrequent buyers with low item costs and moderate emergency funds. They have the highest emergency use frequency and a balanced distribution across locations and account types.
+- **Cluster 2**: Users with the highest account totals and emergency funds but moderate item costs and very low payment completion rates. This cluster has a higher representation from New York and a significant proportion of student accounts.
 
 ### Visualization of Clusters
 
 Scatter plots were used to visualize the clusters, showing the distribution of customers across different spending patterns.
+- K-means cluster visualisation:
+![Clusters k-means](images/cluster_visualisation_kmeans.png)
 
-### Summary of Findings
+## Recommendations
 
-The clustering analysis revealed distinct customer segments with unique purchasing behaviors:
-- **Cluster 0**: High spenders with significant emergency funds.
-- **Cluster 1**: Moderate spenders with frequent single purchases.
-- **Cluster 2**: Low spenders with high reliance on emergency funds.
+### Cluster 0: High Spenders and Frequent Buyers
 
-## 5) Recommendations
+#### Characteristics:
+- High account totals and item costs.
+- Frequent purchases, both single and multiple items.
+- Moderate emergency fund use and low emergency use frequency.
+- Higher payment completion rate.
 
-- **Cluster 0**: Target these customers with premium services and high-value promotions.
-- **Cluster 1**: Encourage bulk purchases with bundle offers.
-- **Cluster 2**: Provide financial incentives and loyalty programs to increase spending.
+#### Insights and Usefulness:
+1. **Loyalty Programs**: These customers are likely loyal and high-value, so investing in loyalty programs, exclusive deals, and personalized recommendations can further enhance their engagement.
+2. **Premium Services**: Offer premium services or memberships with additional perks, as they are more likely to invest in higher-end products and services.
+3. **Targeted Marketing**: Tailor marketing campaigns with a focus on high-value items and premium product lines to appeal to their purchasing behavior.
 
-## 6) Conclusion
+### Cluster 1: Low Spenders and Infrequent Buyers
+
+#### Characteristics:
+- Low account totals and item costs.
+- Infrequent purchases with higher emergency fund use and the highest emergency use frequency.
+- Balanced distribution across locations and account types.
+
+#### Insights and Usefulness:
+1. **Promotional Campaigns**: Design targeted promotions, discounts, and deals to encourage more frequent purchases and increase their overall spending.
+2. **Budget-Friendly Options**: Highlight budget-friendly options, payment plans, and small-ticket items to match their spending habits.
+3. **Engagement Strategies**: Implement engagement strategies such as email reminders, personalized recommendations, and loyalty rewards for incremental spending.
+
+### Cluster 2: Moderate Spenders with High Emergency Fund Use
+
+#### Characteristics:
+- Moderate account totals and item costs.
+- Infrequent purchases but high emergency fund use.
+- Very low payment completion rate.
+- More likely to be from New York and have premium accounts.
+
+#### Insights and Usefulness:
+1. **Payment Flexibility**: Introduce flexible payment options, installment plans, or delayed payment schemes to help improve their payment completion rates.
+2. **Financial Assistance Programs**: Develop financial assistance programs or targeted offers to help these customers manage their finances better and encourage more consistent spending.
+3. **Retention Strategies**: Focus on retention strategies for premium account holders with personalized support, financial advice, and exclusive content to increase their satisfaction and reduce churn.
+
+## 5) Conclusion
 
 The clustering analysis provided valuable insights into customer segments, enabling ShopEasy to tailor marketing strategies and enhance user experiences. By leveraging these insights, ShopEasy can improve customer satisfaction and drive sales growth.
