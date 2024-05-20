@@ -48,8 +48,45 @@ To gain a deeper understanding of the dataset, we performed exploratory data ana
 - Seaborn
 - Matplotlib
 
-#Missing Values Heatmap
+### Missing Values Heatmap
 
 Visualized missing values to understand the extent of missing data.
-#Visualization 1: Missing Values Heatmap
-output.png
+
+![Missing Values Heatmap](images/missing_values_heatmap.png)
+
+### Correlation Heatmap
+
+Visualized the correlation between different features in the dataset.
+
+![Correlation Heatmap](images/correlation_heatmap.png)
+
+### Account Total vs. Item Costs
+
+Visualized the relationship between the total account value and item costs.
+
+![Account Total vs. Item Costs](images/account_total_vs_item_costs.png)
+
+### Location Frequency
+
+Visualized the distribution of users across different locations.
+
+![Location Frequency](images/location_frequency.png)
+
+### Feature Distributions
+
+Visualized the distributions of various features in the dataset.
+
+![Feature Distributions](images/feature_distributions.png)
+
+### Silhouette Scores for Different Numbers of Clusters
+
+Visualized the silhouette scores for different numbers of clusters.
+
+![Silhouette Scores](images/silhouette_scores.png)
+
+### Cluster Visualization
+
+Visualized the clusters based on account total and item costs.
+
+![Cluster Visualization](images/cluster_visualization.png)
+
