@@ -2,6 +2,7 @@
 Maratkyzy Zhanel (286251)
 Issayeva Tomiris (289721)
 Aruzhan Kenessova (286071)
+George Maurice (E00308)
 
 # Introduction
 
