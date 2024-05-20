@@ -4,11 +4,47 @@ Issayeva Tomiris (289721)
 Aruzhan Kenessova (286071)
 George Maurice (E00308)
 
-# Introduction
+
+
+# ShopEasy Customer Segmentation Analysis
+
+## 1) Introduction
 
 ShopEasy is a leading e-commerce platform that aims to enhance user experiences through personalized services and promotions. This project focuses on understanding customer behavior by segmenting them into distinct groups based on their purchasing patterns. By applying clustering techniques, we aim to uncover hidden patterns and provide actionable insights for improving customer satisfaction and driving sales growth.
 
- ## Exploratory Data Analysis and Data Visualization
+## 2) Methods
+
+### Data Overview
+
+The dataset used for this analysis is `shopEasy.csv`, which contains information about 50,000 different customers. For each customer, we have data about their total spending, frequency of purchases, and several other attributes related to their buying behavior. The main features included in the dataset are:
+
+- **personId**: Unique identifier for each user
+- **accountTotal**: Total amount spent by the user
+- **frequencyIndex**: Frequency of purchases
+- **itemCosts**: Total cost of purchased items
+- **singleItemCosts**: Costs of single purchase items
+- **multipleItemCosts**: Costs of installment purchase items
+- **emergencyFunds**: Amount kept for emergency purchases
+- **itemBuyFrequency**: Frequency of purchases
+- **singleItemBuyFrequency**: Frequency of single purchases
+- **multipleItemBuyFrequency**: Frequency of installment purchases
+- **emergencyUseFrequency**: Frequency of emergency fund usage
+- **emergencyCount**: Number of times emergency funds were used
+- **itemCount**: Total number of items purchased
+- **maxSpendLimit**: Maximum spend limit set by ShopEasy
+- **monthlyPaid**: Total amount paid monthly
+- **leastAmountPaid**: Least amount paid in a single transaction
+- **paymentCompletionRate**: Percentage of completed payments
+- **accountLifespan**: Duration of account existence
+- **location**: User's city or region
+- **accountType**: Type of account (Regular, Premium, Student)
+- **webUsage**: Frequency of web usage for shopping
+
+### Preparation of Data
+
+We loaded the data into a pandas dataframe and cleaned it by removing invalid values. This step was essential for ensuring the accuracy and reliability of our analysis.
+
+### Exploratory Data Analysis and Data Visualization
 
 To gain a deeper understanding of the dataset, we performed exploratory data analysis (EDA) using data visualization and statistical analysis techniques. The main Python packages used for this analysis were:
 
@@ -17,112 +53,68 @@ To gain a deeper understanding of the dataset, we performed exploratory data ana
 - Seaborn
 - Matplotlib
 
-### Dataset Overview
 
-The dataset contains the following features:
-
-- **personId**: Unique identifier for each user on the platform
-- **accountTotal**: Total amount spent by the user on ShopEasy since their registration
-- **frequencyIndex**: Reflects how frequently the user shops, with 1 being very frequent and values less than 1 being less frequent
-- **itemCosts**: Total costs of items purchased by the user
-- **singleItemCosts**: Costs of items that the user bought in a single purchase without opting for installments
-- **multipleItemCosts**: Costs of items that the user decided to buy in installments
-- **emergencyFunds**: Amount that the user decided to keep as a backup in their ShopEasy wallet for faster checkout or emergency purchases
-- **itemBuyFrequency**: Frequency with which the user makes purchases
-- **singleItemBuyFrequency**: How often the user makes single purchases without opting for installments
-- **multipleItemBuyFrequency**: How often the user opts for installment-based purchases
-- **emergencyUseFrequency**: How frequently the user taps into their emergency funds
-- **emergencyCount**: Number of times the user has used their emergency funds
-- **itemCount**: Total number of individual items purchased by the user
-- **maxSpendLimit**: The maximum amount the user can spend in a single purchase, set by ShopEasy based on user's buying behavior and loyalty
-- **monthlyPaid**: Total amount paid by the user every month
-- **leastAmountPaid**: The least amount paid by the user in a single transaction
-- **paymentCompletionRate**: Percentage of purchases where the user has paid the full amount
-- **accountLifespan**: Duration for which the user has been registered on ShopEasy
-- **location**: User's city or region
-- **accountType**: The type of account held by the user. Regular for most users, Premium for those who have subscribed to ShopEasy premium services, and Student for users who have registered with a student ID
-- **webUsage**: A metric (0-100) indicating the frequency with which the user shops on ShopEasy via web browsers. A higher number indicates more frequent web usage
-
-### Visualizations
-
-#### Missing Values Heatmap
-
-Visualized missing values to understand the extent of missing data.
-
-![Missing Values Heatmap](images/missing_values_heatmap.png)
 
 #### Correlation Heatmap
 
-Visualized the correlation between different features in the dataset.
+Analyzed correlations between features to identify potential relationships.
+![Correlation Heatmap](path/to/correlation_heatmap.png)
 
-![Correlation Heatmap](images/correlation_heatmap.png)
+#### Distribution Plots
 
-#### Account Total vs. Item Costs
+- **Account Total vs. Item Costs**: Visualized the relationship between total spending and item costs.
+![Account Total vs. Item Costs](path/to/account_total_vs_item_costs.png)
 
-Visualized the relationship between the total account value and item costs.
+- **Location Frequency**: Bar plot showing the distribution of users across different locations.
+![Location Frequency](path/to/location_frequency.png)
 
-![Account Total vs. Item Costs](images/account_total_vs_item_costs.png)
+- **Feature Distributions**: Histograms for various features to understand their distributions.
+![Feature Distributions](path/to/feature_distributions.png)
 
-#### Location Frequency
+## 3) Clustering Analysis
 
-Visualized the distribution of users across different locations.
+### Clustering Approach
 
-![Location Frequency](images/location_frequency.png)
+This is a clustering problem aimed at segmenting customers into distinct groups based on purchasing behavior. KMeans clustering was chosen for this task due to its efficiency and effectiveness.
 
-#### Feature Distributions
+### Hyperparameter Tuning
 
-Visualized the distributions of various features in the dataset.
+Silhouette scores were used to determine the optimal number of clusters. The number of clusters (`k`) was varied from 2 to 10, and the silhouette score was calculated for each `k`.
 
-![Feature Distributions](images/feature_distributions.png)
+![Silhouette Scores](path/to/silhouette_scores.png)
 
-#### Silhouette Scores for Different Numbers of Clusters
+### KMeans Clustering
 
-Visualized the silhouette scores for different numbers of clusters.
+KMeans clustering was performed with the optimal number of clusters. Each customer was assigned to a cluster, and the characteristics of each cluster were analyzed.
 
-![Silhouette Scores](images/silhouette_scores.png)
+### Cluster Descriptions
 
-#### Cluster Visualization
+Clusters were described based on the mean values of features within each cluster. This provided insights into the characteristics of customers in each segment.
 
-Visualized the clusters based on account total and item costs.
+- **Cluster 0**: Customers with high account total and emergency funds, moderate item costs.
+- **Cluster 1**: Customers with moderate account total and item costs, frequent single item purchases.
+- **Cluster 2**: Customers with low account total, high frequency of emergency fund usage.
 
-![Cluster Visualization](images/cluster_visualization.png)
+### Visualization of Clusters
 
-## Experimental Design
+Scatter plots were used to visualize the clusters, showing the distribution of customers across different spending patterns.
+![Cluster Visualization](path/to/cluster_visualization.png)
 
-### Content-Based Recommender Systems
+## 4) Results
 
-We built a recommender system to suggest new items to users based on their past purchases. The system recommends items that are similar to those the user has previously bought.
+### Summary of Findings
 
-**Similarity Measurement**:
-- Similarity is measured by comparing the attributes of items previously purchased by the user with other items.
-- Cosine similarity is used to measure similarity. It calculates the dot product of the attribute vectors, measuring how similar the directions of the vectors are. A higher cosine similarity indicates more similar items.
+The clustering analysis revealed distinct customer segments with unique purchasing behaviors:
+- **Cluster 0**: High spenders with significant emergency funds.
+- **Cluster 1**: Moderate spenders with frequent single purchases.
+- **Cluster 2**: Low spenders with high reliance on emergency funds.
 
-**Attributes Used**:
-- The attributes selected for the recommendation task include: `product_type`, `colour_group`, `section`, and `garment_group`.
-- These attributes were chosen because they span a wide range of values and contribute different types of information.
+## 5) Recommendations
 
-**Implementation**:
-- The dataset was prepared so that each row represents a different item and columns represent all possible values of the selected attributes. Each row contains binary features indicating the presence of each attribute value.
-- A function was built to receive a customer ID and, based on all the purchases made by that customer, returns recommended items.
+- **Cluster 0**: Target these customers with premium services and high-value promotions.
+- **Cluster 1**: Encourage bulk purchases with bundle offers.
+- **Cluster 2**: Provide financial incentives and loyalty programs to increase spending.
 
-### Collaborative Recommender System
+## 6) Conclusion
 
-For collaborative filtering, we transformed the data into a utility matrix where rows represent customers and columns represent items.
-
-**Utility Matrix**:
-- Each entry in the matrix represents the interaction (e.g., purchase) between a customer and an item.
-- We used the scipy.sparse.csr_matrix method from the sklearn library to generate the matrix.
-
-**Sparsity Handling**:
-- To ensure reliable data retrieval, we checked the sparsity of the matrix. Significant results are obtained if the sparsity is at least 0.5%. Since our matrix had a sparsity of 0.11%, we removed rows and columns with fewer than 20 non-zero values.
-
-**Algorithm**:
-- The k-NN algorithm was used to implement the collaborative filtering recommender system.
-
-## Results
-
-Manual testing of the outputs from different recommender systems demonstrated that we built effective tools to enhance the customization of offers for a retail platform. The collaborative recommender system, which takes a customer ID and returns various recommended items, was found to be the most precise. This system does not suffer from the data loss issues seen in the collaborative filtering approach due to matrix sparsity.
-
-## Conclusions
-
-During this project, we applied and practiced our knowledge of recommender systems. We successfully implemented both content-based and collaborative filtering recommenders. As future work, we suggest refining the software for greater precision and exploring other types of recommender systems. Overall, we are satisfied with the results, which have strengthened our skills and understanding of the subject matter.
+The clustering analysis provided valuable insights into customer segments, enabling ShopEasy to tailor marketing strategies and enhance user experiences. By leveraging these insights, ShopEasy can improve customer satisfaction and drive sales growth.
