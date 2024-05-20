@@ -13,16 +13,19 @@ ShopEasy is a leading e-commerce platform that aims to enhance user experiences 
 ## 2) Methods
 
 ### Data Overview
+The dataset utilized in our analysis consists of a single comprehensive file:
 
-The datasets utilized in our analysis consist of three primary files:
+- **shopEasy.csv**: This dataset provides a detailed look at customer interactions and transactions on the ShopEasy platform. It encompasses a variety of information on 8,950 entries, giving us a deep dive into the purchasing patterns and behaviors of the customers. Here are the key components of this dataset:
 
-1.⁠ ⁠*⁠ recsys_customers.csv ⁠*: This dataset houses detailed information on 41,253 unique customers. For each customer, data is available concerning their age, as well as their membership status in the store’s club or subscription to the fashion newsletter, which indicates a level of engagement with the clothing shop.
+  1. **Customer Details**: Each record includes the customer's identifier and demographic information like location and account type, which helps in understanding customer diversity and preferences.
+  
+  2. **Account Metrics**: Data such as account totals, emergency funds, and the maximum spend limit are available. These metrics help in assessing the financial engagement and capacity of the customers.
+  
+  3. **Transaction Details**: Detailed records of each transaction include the cost of items purchased, whether the purchases were single or multiple items, and the frequency of these transactions. This provides insights into the purchasing habits and preferences of the customers.
+  
+  4. **Engagement Metrics**: Information on the frequency of account usage, types of items bought, and customer loyalty indicators like subscription to newsletters or participation in the store’s club. These metrics are crucial for understanding customer loyalty and engagement levels.
 
-2.⁠ ⁠*⁠ recsys_articles.csv ⁠*: Containing information on 6,536 articles, this dataset is rich with details on 21 distinct attributes for each article. These attributes cover aspects such as the article's type, color, and the specific group it belongs to, providing a comprehensive view of the product range available at the store.
-
-3.⁠ ⁠*⁠ recsys_transactions.csv ⁠*: This dataset captures a substantial 369,113 transactions. Each record includes the date of the transaction, the customer who made the purchase, and the article that was bought, allowing for detailed tracking of sales and customer purchasing behavior.
-
-These datasets collectively form a robust foundation for our analysis, enabling us to delve deep into customer demographics, product details, and buying patterns, which are crucial for developing effective recommender systems.
+This dataset forms a robust foundation for our analysis, enabling us to explore detailed customer demographics, financial behavior, and transactional data, which are crucial for developing effective segmentation and personalized marketing strategies.
 
 ### Preparation of Data:
 Data cleaning involved handling missing values and erroneous entries, particularly in the 'maxSpendLimit' and 'leastAmountPaid' fields. This was crucial as it ensured the integrity and reliability of our analysis.
