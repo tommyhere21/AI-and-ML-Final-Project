@@ -1,8 +1,8 @@
 # AI-and-ML-Final-Project
-Issayeva Tomiris (289721)
-Maratkyzy Zhanel (286251)
-Aruzhan Kenessova (286071)
-George Maurice (E00308)
+- Issayeva Tomiris (289721)
+- Maratkyzy Zhanel (286251)
+- Aruzhan Kenessova (286071)
+- George Maurice (E00308)
 
 # ShopEasy Customer Segmentation Analysis
 
