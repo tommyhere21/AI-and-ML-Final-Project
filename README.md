@@ -4,8 +4,6 @@ Issayeva Tomiris (289721)
 Aruzhan Kenessova (286071)
 George Maurice (E00308)
 
-
-
 # ShopEasy Customer Segmentation Analysis
 
 ## 1) Introduction
@@ -16,48 +14,29 @@ ShopEasy is a leading e-commerce platform that aims to enhance user experiences 
 
 ### Data Overview
 
-The dataset used for this analysis is `shopEasy.csv`, which contains information about 50,000 different customers. For each customer, we have data about their total spending, frequency of purchases, and several other attributes related to their buying behavior. The main features included in the dataset are:
+The datasets utilized in our analysis consist of three primary files:
 
-- **personId**: Unique identifier for each user
-- **accountTotal**: Total amount spent by the user
-- **frequencyIndex**: Frequency of purchases
-- **itemCosts**: Total cost of purchased items
-- **singleItemCosts**: Costs of single purchase items
-- **multipleItemCosts**: Costs of installment purchase items
-- **emergencyFunds**: Amount kept for emergency purchases
-- **itemBuyFrequency**: Frequency of purchases
-- **singleItemBuyFrequency**: Frequency of single purchases
-- **multipleItemBuyFrequency**: Frequency of installment purchases
-- **emergencyUseFrequency**: Frequency of emergency fund usage
-- **emergencyCount**: Number of times emergency funds were used
-- **itemCount**: Total number of items purchased
-- **maxSpendLimit**: Maximum spend limit set by ShopEasy
-- **monthlyPaid**: Total amount paid monthly
-- **leastAmountPaid**: Least amount paid in a single transaction
-- **paymentCompletionRate**: Percentage of completed payments
-- **accountLifespan**: Duration of account existence
-- **location**: User's city or region
-- **accountType**: Type of account (Regular, Premium, Student)
-- **webUsage**: Frequency of web usage for shopping
+1.⁠ ⁠*⁠ recsys_customers.csv ⁠*: This dataset houses detailed information on 41,253 unique customers. For each customer, data is available concerning their age, as well as their membership status in the store’s club or subscription to the fashion newsletter, which indicates a level of engagement with the clothing shop.
 
-### Preparation of Data
+2.⁠ ⁠*⁠ recsys_articles.csv ⁠*: Containing information on 6,536 articles, this dataset is rich with details on 21 distinct attributes for each article. These attributes cover aspects such as the article's type, color, and the specific group it belongs to, providing a comprehensive view of the product range available at the store.
 
-We loaded the data into a pandas dataframe and cleaned it by removing invalid values. This step was essential for ensuring the accuracy and reliability of our analysis.
+3.⁠ ⁠*⁠ recsys_transactions.csv ⁠*: This dataset captures a substantial 369,113 transactions. Each record includes the date of the transaction, the customer who made the purchase, and the article that was bought, allowing for detailed tracking of sales and customer purchasing behavior.
 
-### Exploratory Data Analysis and Data Visualization
+These datasets collectively form a robust foundation for our analysis, enabling us to delve deep into customer demographics, product details, and buying patterns, which are crucial for developing effective recommender systems.
 
-To gain a deeper understanding of the dataset, we performed exploratory data analysis (EDA) using data visualization and statistical analysis techniques. The main Python packages used for this analysis were:
-
-- Numpy
-- Pandas
-- Seaborn
-- Matplotlib
+### Preparation of Data:
+Data cleaning involved handling missing values and erroneous entries, particularly in the 'maxSpendLimit' and 'leastAmountPaid' fields. This was crucial as it ensured the integrity and reliability of our analysis.
 
 
+ ### Exploratory Data Analysis and Data Visualization
 
+Our EDA focused on uncovering underlying patterns and relationships within the data, employing statistical analysis and visualization tools. Key insights were drawn from the distribution of account totals, item costs, and customer engagement metrics using Python libraries such as Pandas, Matplotlib, and Seaborn.
 
+### Section 3) Experimental Design
+ 
+Clustering Techniques Used: K-Means Clustering:  Aimed to segment customers into distinct groups based on their spending behavior and account characteristics. We determined the optimal number of clusters using the Elbow Method and validated these segments with silhouette scores. Agglomerative Clustering:  Served as a hierarchical clustering approach to validate and refine the segments identified by k-means. This method provided a different perspective on the data's structure and helped in understanding the hierarchical relationships between customers. Utility of Segmentation: These techniques allowed us to categorize customers into segments that reflect varying levels of purchasing power and engagement, which can be targeted with tailored marketing strategies.
 
-
+- 
 #### Correlation Heatmap
 
 Visualized the correlation between different features in the dataset.
