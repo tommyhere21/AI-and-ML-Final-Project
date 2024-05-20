@@ -60,16 +60,16 @@ Visualized the distributions of various features in the dataset.
 
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/be7fc9d0-7e8f-4d64-85c8-900807caf6ca)
 
-# This scatterplot with regression line shows the relationship between account total and item costs for ShopEasy customers, indicating a general trend where higher account totals do not necessarily correlate with higher item costs
+ This scatterplot with regression line shows the relationship between account total and item costs for ShopEasy customers, indicating a general trend where higher account totals do not necessarily correlate with higher item costs
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/63fb252b-b0e1-4fc5-8558-68bed71fea63)
 
-#  scatterplot with a regression line illustrates the relationship between account totals and emergency funds among ShopEasy customers, showing a moderate positive correlation where customers with higher account balances tend to have more in emergency funds.
+  scatterplot with a regression line illustrates the relationship between account totals and emergency funds among ShopEasy customers, showing a moderate positive correlation where customers with higher account balances tend to have more in emergency funds.
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/e4388904-7dad-44d9-9f13-ba756be1e458)
 
-#  histogram displays the distribution of account totals for ShopEasy customers in Chicago (blue), Los Angeles (yellow), and New York (green), showing that lower account totals are more common across all locations, with a significant concentration in the lowest bin.
+  histogram displays the distribution of account totals for ShopEasy customers in Chicago (blue), Los Angeles (yellow), and New York (green), showing that lower account totals are more common across all locations, with a significant concentration in the lowest bin.
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/124d440a-6d58-4580-a46f-e1ba03b6dadc)
 
-# correlation heatmap displays the relationships between various metrics within the ShopEasy dataset. Each cell color indicates the strength of correlation, with warmer colors (orange to yellow) showing higher positive correlations, and cooler colors (purple) indicating lower correlations. Notable strong correlations are seen between related purchasing behaviors such as item costs and single/multiple item buy frequencies.
+ correlation heatmap displays the relationships between various metrics within the ShopEasy dataset. Each cell color indicates the strength of correlation, with warmer colors (orange to yellow) showing higher positive correlations, and cooler colors (purple) indicating lower correlations. Notable strong correlations are seen between related purchasing behaviors such as item costs and single/multiple item buy frequencies.
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/c2183681-f72e-49cf-9db2-708d3879d29f)
 
 ### Implementing clustering
