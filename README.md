@@ -90,3 +90,28 @@ Visualized the clusters based on account total and item costs.
 
 ![Cluster Visualization](images/cluster_visualization.png)
 
+## Methods
+
+### Data Preparation
+
+We loaded the data into a pandas dataframe and cleaned it by removing invalid values. This step was essential for ensuring the accuracy and reliability of our analysis.
+
+### Exploratory Data Analysis
+
+We performed exploratory data analysis to gain insights into the dataset and understand the relationships between different features. The analysis included the creation of various plots and visualizations, such as heatmaps, scatter plots, and histograms.
+
+### Clustering
+
+We applied clustering techniques to segment the users into distinct groups based on their purchasing behavior. The K-Means algorithm was used to identify the optimal number of clusters. The silhouette score was used to evaluate the clustering performance.
+
+## Results
+
+The clustering analysis revealed several distinct segments of users with different purchasing behaviors. These insights can be used to tailor marketing strategies and improve customer satisfaction by offering personalized recommendations and promotions.
+
+## Conclusion
+
+This project demonstrates the power of data analysis and machine learning in uncovering hidden patterns and providing actionable insights. By understanding customer behavior, ShopEasy can enhance user experiences and drive sales growth.
+
+## Future Work
+
+Future work could involve exploring more advanced clustering techniques, incorporating additional data sources, and implementing real-time analytics to further improve personalization and customer satisfaction.
