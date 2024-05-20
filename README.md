@@ -42,12 +42,6 @@ This histogram shows that most customers have low account balances, with the fre
 ![account total](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/ea54bc02-a913-47a9-b022-b7fdd545b2d6)
 
 
-#### Account Total vs. Item Costs
-
-Visualized the relationship between the total account value and item costs.
-
-![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/d0155184-d5e1-4666-bb06-0999299165da)
-
 #### Location Frequency
 
 Visualized the distribution of users across different locations.
