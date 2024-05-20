@@ -47,3 +47,9 @@ To gain a deeper understanding of the dataset, we performed exploratory data ana
 - Pandas
 - Seaborn
 - Matplotlib
+
+#Missing Values Heatmap
+
+Visualized missing values to understand the extent of missing data.
+#Visualization 1: Missing Values Heatmap
+
