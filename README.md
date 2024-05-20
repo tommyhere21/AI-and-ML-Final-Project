@@ -1,4 +1,4 @@
-# AI-and-ML-Final-Project
+# AI and ML Final Project: ShopEasy clustering
 - Issayeva Tomiris (289721)
 - Maratkyzy Zhanel (286251)
 - Aruzhan Kenessova (286071)
