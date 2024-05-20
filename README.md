@@ -210,3 +210,6 @@ Scatter plots were used to visualize the clusters, showing the distribution of c
 ## 5) Conclusion
 
 The clustering analysis provided valuable insights into customer segments, enabling ShopEasy to tailor marketing strategies and enhance user experiences. By leveraging these insights, ShopEasy can improve customer satisfaction and drive sales growth.
+
+**Further research**:
+While the cluster analysis has shed light on customer segmentation based on financial metrics, it may not fully address qualitative aspects such as customer preferences and brand loyalty. Future research could integrate additional data sources like customer feedback and demographic information to create more comprehensive customer profiles. Moreover, employing advanced clustering techniques and conducting post-clustering analysis could provide deeper insights into customer behavior, enabling personalized marketing strategies. Overall, future work should focus on refining the clustering methodology and incorporating richer data sources to enhance the understanding of customer segmentation in the e-commerce platform.
