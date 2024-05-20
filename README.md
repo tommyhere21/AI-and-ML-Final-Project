@@ -66,8 +66,9 @@ Visualized the distributions of various features in the dataset.
 - **Baselines**: Clustering segmentation analysis was used to compare. 
 - **Evaluation metrics**: We used silhouette scores to compare the suitability of StandardScaler, and the resulting score was 0.1, which is very small and is unsatisfactory. We also visualised the resulting clusters and the clusters were not easily defined, showing poor clustering quality.
 - In the result, we came to the conclusion to move to different feature scaling technique - RobustScaler. StandardScaler is poor at addresing outliers of the data, which our dataset had in abundance, which skewed the results and clustering.
-![](images/silhouette_scores.png)
-![](images/silhouette_analysis_kmeans.png)
+- **Cluster visualisation of StandardScaler**: StandardScaler skewed the data, therefore elbow analysis showed that the optimal number of clusters is 4. This is the visualisation of 4 clusters using the data which was scaled using StandardScaler:
+![Cluster standard](images/cluster_visualisation_standard.png)
+
 
 ### **Experiment 2: Number of clusters**
 - **The main purpose**: To determine the right number of clusters for clustering algorithms. 
