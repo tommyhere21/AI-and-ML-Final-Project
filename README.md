@@ -66,23 +66,6 @@ Visualized the distributions of various features in the dataset.
  correlation heatmap displays the relationships between various metrics within the ShopEasy dataset. Each cell color indicates the strength of correlation, with warmer colors (orange to yellow) showing higher positive correlations, and cooler colors (purple) indicating lower correlations. Notable strong correlations are seen between related purchasing behaviors such as item costs and single/multiple item buy frequencies.
 ![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/c2183681-f72e-49cf-9db2-708d3879d29f)
 
-### Implementing clustering
-# K-Means clustering
-# StandardScaler
-We first used StandardScaler, not aware of its detriments. The resulting analysis was skewed by using StandardScaler, which wasn't suitable for our data. The data has a lot of outliers, and StandardScaler is not suitable for data with a lot of outliers and the results come out skewed. Therefore the first time the elbow method was indicative of using 4 clusters.
-
-The results were not satisfactory, the silhouette score was only 0.1 which is very small. The cluster visualisation provided not clear picture of the clusters, overall bad quality of the clustering.The  plot utilizes the Elbow Method to optimize the number of clusters for K-means clustering. It graphs the cluster count against inertia (sum of squared distances of samples to their closest cluster center). The plot shows a discernible elbow at four clusters, suggesting that increasing the number of clusters beyond this point yields diminishing returns in terms of intra-cluster variance reduction. This method helps in selecting a cluster count that balances complexity and explanatory power of the clustering model.
-
-![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/9cb6c2ac-7318-4b5c-b8c0-5e7db11c3ef8)
-
-# The  visualization employs Principal Component Analysis (PCA)
-to reduce dimensionality for effective visualization of K-means clustering results. It plots the first two principal components, showing data points grouped into four distinct clusters, each color-coded. Cluster centers are marked with red 'X' symbols, illustrating the centroids of the respective clusters. This visualization aids in assessing the clustering algorithm's effectiveness by observing the spatial distribution and overlap between clusters.
-
-![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/d0d7579b-32bb-42e7-817a-db7fff4517be)
-
- Elbow method to find the right number of clusters.
-Iterate through 1-9 number of clusters and calculate the inertia for each number of clusters and plot it. The elbow point is where the inertia starts to decrease at a slower rate. The elbow point is not fully clear, but 3 is most likely it.
-![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/728e32ed-ed3c-46aa-8fd5-e236f8cc4741)
 
 ### Section 3) Experimental Design
 
