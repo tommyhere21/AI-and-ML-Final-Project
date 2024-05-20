@@ -35,17 +35,18 @@ Data cleaning involved handling missing values and erroneous entries, particular
 
 Our EDA focused on uncovering underlying patterns and relationships within the data, employing statistical analysis and visualization tools. Key insights were drawn from the distribution of account totals, item costs, and customer engagement metrics using Python libraries such as Pandas, Matplotlib, and Seaborn.
 
-#### Correlation Heatmap
+#### Data Visualisation
 
-Visualized the correlation between different features in the dataset.
+This histogram shows that most customers have low account balances, with the frequency decreasing as account values increase, indicating a right-skewed distribution.
 
-![Correlation Heatmap](images/correlation_heatmap.png)
+![account total](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/ea54bc02-a913-47a9-b022-b7fdd545b2d6)
+
 
 #### Account Total vs. Item Costs
 
 Visualized the relationship between the total account value and item costs.
 
-![Account Total vs. Item Costs](images/account_total_vs_item_costs.png)
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/d0155184-d5e1-4666-bb06-0999299165da)
 
 #### Location Frequency
 
@@ -57,7 +58,37 @@ Visualized the distribution of users across different locations.
 
 Visualized the distributions of various features in the dataset.
 
-![Feature Distributions](images/feature_distributions.png)
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/be7fc9d0-7e8f-4d64-85c8-900807caf6ca)
+
+# This scatterplot with regression line shows the relationship between account total and item costs for ShopEasy customers, indicating a general trend where higher account totals do not necessarily correlate with higher item costs
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/63fb252b-b0e1-4fc5-8558-68bed71fea63)
+
+#  scatterplot with a regression line illustrates the relationship between account totals and emergency funds among ShopEasy customers, showing a moderate positive correlation where customers with higher account balances tend to have more in emergency funds.
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/e4388904-7dad-44d9-9f13-ba756be1e458)
+
+#  histogram displays the distribution of account totals for ShopEasy customers in Chicago (blue), Los Angeles (yellow), and New York (green), showing that lower account totals are more common across all locations, with a significant concentration in the lowest bin.
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/124d440a-6d58-4580-a46f-e1ba03b6dadc)
+
+# correlation heatmap displays the relationships between various metrics within the ShopEasy dataset. Each cell color indicates the strength of correlation, with warmer colors (orange to yellow) showing higher positive correlations, and cooler colors (purple) indicating lower correlations. Notable strong correlations are seen between related purchasing behaviors such as item costs and single/multiple item buy frequencies.
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/c2183681-f72e-49cf-9db2-708d3879d29f)
+
+### Implementing clustering
+# K-Means clustering
+# StandardScaler
+We first used StandardScaler, not aware of its detriments. The resulting analysis was skewed by using StandardScaler, which wasn't suitable for our data. The data has a lot of outliers, and StandardScaler is not suitable for data with a lot of outliers and the results come out skewed. Therefore the first time the elbow method was indicative of using 4 clusters.
+
+The results were not satisfactory, the silhouette score was only 0.1 which is very small. The cluster visualisation provided not clear picture of the clusters, overall bad quality of the clustering.The  plot utilizes the Elbow Method to optimize the number of clusters for K-means clustering. It graphs the cluster count against inertia (sum of squared distances of samples to their closest cluster center). The plot shows a discernible elbow at four clusters, suggesting that increasing the number of clusters beyond this point yields diminishing returns in terms of intra-cluster variance reduction. This method helps in selecting a cluster count that balances complexity and explanatory power of the clustering model.
+
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/9cb6c2ac-7318-4b5c-b8c0-5e7db11c3ef8)
+
+# The  visualization employs Principal Component Analysis (PCA)
+to reduce dimensionality for effective visualization of K-means clustering results. It plots the first two principal components, showing data points grouped into four distinct clusters, each color-coded. Cluster centers are marked with red 'X' symbols, illustrating the centroids of the respective clusters. This visualization aids in assessing the clustering algorithm's effectiveness by observing the spatial distribution and overlap between clusters.
+
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/d0d7579b-32bb-42e7-817a-db7fff4517be)
+
+# Elbow method to find the right number of clusters.
+Iterate through 1-9 number of clusters and calculate the inertia for each number of clusters and plot it. The elbow point is where the inertia starts to decrease at a slower rate. The elbow point is not fully clear, but 3 is most likely it.
+![image](https://github.com/tommyhere21/AI-and-ML-Final-Project-289721/assets/50324471/728e32ed-ed3c-46aa-8fd5-e236f8cc4741)
 
 ### Section 3) Experimental Design
 
