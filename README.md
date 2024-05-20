@@ -55,33 +55,44 @@ To gain a deeper understanding of the dataset, we performed exploratory data ana
 
 
 
+
+
+
 #### Correlation Heatmap
 
-Analyzed correlations between features to identify potential relationships.
-![Correlation Heatmap](path/to/correlation_heatmap.png)
+Visualized the correlation between different features in the dataset.
 
-#### Distribution Plots
+![Correlation Heatmap](images/correlation_heatmap.png)
 
-- **Account Total vs. Item Costs**: Visualized the relationship between total spending and item costs.
-![Account Total vs. Item Costs](path/to/account_total_vs_item_costs.png)
+#### Account Total vs. Item Costs
 
-- **Location Frequency**: Bar plot showing the distribution of users across different locations.
-![Location Frequency](path/to/location_frequency.png)
+Visualized the relationship between the total account value and item costs.
 
-- **Feature Distributions**: Histograms for various features to understand their distributions.
-![Feature Distributions](path/to/feature_distributions.png)
+![Account Total vs. Item Costs](images/account_total_vs_item_costs.png)
 
-## 3) Clustering Analysis
+#### Location Frequency
 
-### Clustering Approach
+Visualized the distribution of users across different locations.
 
-This is a clustering problem aimed at segmenting customers into distinct groups based on purchasing behavior. KMeans clustering was chosen for this task due to its efficiency and effectiveness.
+![Location Frequency](images/location_frequency.png)
 
-### Hyperparameter Tuning
+#### Feature Distributions
 
-Silhouette scores were used to determine the optimal number of clusters. The number of clusters (`k`) was varied from 2 to 10, and the silhouette score was calculated for each `k`.
+Visualized the distributions of various features in the dataset.
 
-![Silhouette Scores](path/to/silhouette_scores.png)
+![Feature Distributions](images/feature_distributions.png)
+
+#### Silhouette Scores for Different Numbers of Clusters
+
+Visualized the silhouette scores for different numbers of clusters.
+
+![Silhouette Scores](images/silhouette_scores.png)
+
+#### Cluster Visualization
+
+Visualized the clusters based on account total and item costs.
+
+![Cluster Visualization](images/cluster_visualization.png)
 
 ### KMeans Clustering
 
