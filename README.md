@@ -109,7 +109,7 @@ Clusters were described based on the mean values of features within each cluster
 ### Visualization of Clusters
 
 Scatter plots were used to visualize the clusters, showing the distribution of customers across different spending patterns.
-![Cluster Visualization](path/to/cluster_visualization.png)
+
 
 ## 4) Results
 
