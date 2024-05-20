@@ -35,10 +35,6 @@ Data cleaning involved handling missing values and erroneous entries, particular
 
 Our EDA focused on uncovering underlying patterns and relationships within the data, employing statistical analysis and visualization tools. Key insights were drawn from the distribution of account totals, item costs, and customer engagement metrics using Python libraries such as Pandas, Matplotlib, and Seaborn.
 
-### Section 3) Experimental Design
- 
-Clustering Techniques Used: K-Means Clustering:  Aimed to segment customers into distinct groups based on their spending behavior and account characteristics. We determined the optimal number of clusters using the Elbow Method and validated these segments with silhouette scores. Agglomerative Clustering:  Served as a hierarchical clustering approach to validate and refine the segments identified by k-means. This method provided a different perspective on the data's structure and helped in understanding the hierarchical relationships between customers. Utility of Segmentation: These techniques allowed us to categorize customers into segments that reflect varying levels of purchasing power and engagement, which can be targeted with tailored marketing strategies.
-
 #### Correlation Heatmap
 
 Visualized the correlation between different features in the dataset.
@@ -75,9 +71,26 @@ Visualized the clusters based on account total and item costs.
 
 ![Cluster Visualization](images/cluster_visualization.png)
 
-### KMeans Clustering
+### Section 3) Experimental Design
 
-KMeans clustering was performed with the optimal number of clusters. Each customer was assigned to a cluster, and the characteristics of each cluster were analyzed.
+**Experiment 1: K-means StandardScaler vs RobustScaler**
+- **The main purpose**: To assess the suitability of StandardScaler or RobustScaler for preprocessing data with outliers and its impact on clustering analysis.
+- **Baselines**: Clustering segmentation analysis was used to compare. 
+- **Evaluation metrics**: We used silhouette scores to compare the suitability of StandardScaler, and the resulting score was 0.1, which is very small and is unsatisfactory. We also visualised the resulting clusters and the clusters were not easily defined, showing poor clustering quality.
+- In the result, we came to the conclusion to move to different feature scaling technique - RobustScaler. StandardScaler is poor at addresing outliers of the data, which our dataset had in abundance, which skewed the results and clustering.
+
+**Experiment 2: Number of clusters**
+- **The main purpose**: To determine the right number of clusters for 
+- **Baselines**: We used elbow method, silhouette scores, dendrograms. 
+- **Evaluation metrics**:
+
+**Experiment 3: K-means vs Hierarchical clustering**
+- **The main purpose**: To assess the suitability of K-means or Hierarchical clustering for our model.
+- **Baselines**
+- **Evaluation metrics**: We used silhouette scores.
+ 
+
+## 4) Results
 
 ### Cluster Descriptions
 
@@ -90,9 +103,6 @@ Clusters were described based on the mean values of features within each cluster
 ### Visualization of Clusters
 
 Scatter plots were used to visualize the clusters, showing the distribution of customers across different spending patterns.
-
-
-## 4) Results
 
 ### Summary of Findings
 
